@@ -1,5 +1,5 @@
 .carousel-indicators{
-  transform: translateX(-50%);
+  transform: translateX(-60%);
 }
 .carousel .carousel-indicators button {
     width: 10px;
@@ -36,7 +36,7 @@
 }
 .carousel-caption{
   position: absolute;
-  left: 10%;
+  left: 0%;
   top: 20%;
   width: 400px;
 }
@@ -54,6 +54,40 @@
   margin-top: 10px;
   text-align: center;  
 }
+.carousel-item{
+ animation: slide 500ms linear;
+}
+
+@keyframes slide {
+  0%{
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (min-width:300px) and (max-width:600px) {
   #howitworks{
     margin-top: 15px;
@@ -91,33 +125,5 @@
   .carousel-indicators [data-bs-target]{
     margin-top: 10px;
     transform: translateY(60%)
-  }
-}
-
-@media screen and (max-width : 320px){
-  .carousel-item > img {
-    position: relative;
-    height: 200px;
-  }
-  .carousel-caption {
-    position: relative;
-  }
-  .carousel-indicators{
-    position: relative;
-  }
-  .carousel-indicators [data-bs-target]{
-    transform: translateY(0%)
-  }
-  #howitworks{
-    box-sizing: border-box;
-  }
-  .carousel-caption > p{
-    font-size: small;
-  }
-  .carousel-caption > h3{
-    font-size: small;
-  }
-  .text {
-    font-size: small;
   }
 }
